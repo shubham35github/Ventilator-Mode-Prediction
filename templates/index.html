@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventilator Mode Prediction</title>
+</head>
+
+
+<body>
+    <center>
+        <h1 style="color:green;">Ventilator Mode Prediction</h1>
+  
+    </center>
+    <div class="bg">
+        <form action="{{ url_for('predict')}}" method="post">
+                                    
+            
+            <label>TVI: </label>
+            <input id="first" name="tvi" type="number " required="required" align="middle">
+            <br>
+            <label>E-Time: </label>
+            <input id="first" name="e-time" type="number " required="required">
+            <br>
+            <label>I-Time: </label>
+            <input id="first" name="i-time" type="number " required="required">
+            <br>
+            <label>TVE: </label>
+            <input id="first" name="tve" type="number " required="required">
+            <br>
+            <label>EIRatio: </label>
+            <input id="first" name="eiratio" type="number " required="required">
+            <br>
+            <label>minP: </label>
+            <input id="first" name="minP" type="number " required="required">
+            <br>
+            <label>PEEP: </label>
+            <input id="first" name="PEEP" type="number " required="required">
+            <br>
+            
+            <br><button style="font-family:Calibri; font-size: 20px;" id="sub" type="submit ">Ventilator Mode</button>
+            
+<!--            <h4>{{ prediction_text }}</h4>-->
+
+
+
+
+        </form>
+
+    </div>
+    
+    <!-- <h4 style="color:blue; float:center; color:yellow; font-size: 50px;">{{ prediction_text }}</h4>-->
+    <center>
+        <h1 style="color:green;">{{ prediction_text }}</h1>
+  
+    </center>
+    
+<!--
+    <div style="color:blue; float:right; width:300px; color:#12DA9D; font-size: 30px;">
+        <h4>{{ prediction_text }}</h4>
+    
+    </div>
+-->
+    
+
+    
+
+
+    <style>
+        body {
+            
+            text-align: center;
+            padding: 10px;
+        }
+         h3 {
+                
+                text-align: center;
+                font-family:Calibri;
+                color:brown; 
+                font-size: 40px;                   
+        }
+        div {
+                margin-bottom: 10px;
+        }
+        label {
+                display: inline-block;
+                text-align: right;
+                font-family:Calibri;
+                color:red; 
+                font-size: 40px;                   
+        }
+        
+/*
+        #pred_s {
+            position: fixed;
+                right:2500px;
+                top:1000px;
+                font-family:Calibri;
+                color:green;https://www.searchpng.com/wp-content/uploads/2019/02/IPL-Logo-PNG-715x715.png 
+                font-size: 30px;                   
+        }
+                
+*/
+
+        .bg {
+          /* The image used */
+          background-image: url("https://radiusanesthesia.com/wp-content/uploads/2020/07/Tiffany_ventilatorsharing_image_edit.jpg");
+          https://drive.google.com/file/d/1k3Q9cOZmRTDXHa75NGYIwPIbJoNLBEqm/view?usp=sharing
+          /* Full height */
+          height: 100%; 
+
+         /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+           
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+
+    </style>
+</body>
+
+</html>
+
